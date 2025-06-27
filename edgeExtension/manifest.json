@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Confirm",
+  "version": "1.0",
+  "description": "Automatically clicks confirm buttons on dialogs during video playback.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://onlinenew.enetedu.com/*/MyTrainCourse/ChoiceCourse*",
+        "https://onlinenew.enetedu.com/*/MyTrainCourse/OnlineCourse*"
+      ],
+      "js": [
+        "code/jquery.min.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
